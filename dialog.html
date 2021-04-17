@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      :root {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 400px;
+      }
+      h3{
+        text-align: center;
+      }
+      #textbox {
+        display: flex;
+        padding: 6px 6px 6px 6px;
+        margin: 0 auto;
+        font-family: inherit;
+        width: 50%;
+      }
+      button {
+        background-color: rgb(15, 157, 88);
+        margin-left: 65%;
+        color: white;
+        border-color: transparent;
+        padding: 9px 10px 9px 10px;
+        width: 120px;
+        font-family: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Who is going to be using this spreadsheet?</h3>
+    <form onsubmit="event.preventDefault(); google.script.run.processForm(this); google.script.host.close()">
+    <input type="text" name="name" id="textbox" placeholder="Name">
+    <br>
+    <input type="text" name="email" id="textbox" placeholder="Email Address">
+    <br>
+    <button>Make a copy</button>
+    </form>
+  </body>
+</html>

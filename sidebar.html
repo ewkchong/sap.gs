@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      :root{
+        max-width: 300px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-items: center;
+      }
+
+      h1{
+        text-align: center;
+      }
+
+      button{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 280px;
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(80, 80, 80);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 10px 10px 10px 10px;
+        transition: 210ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      button:hover{
+        background-color: rgba(220,220,220, 0.8)
+      }
+
+      button:active{
+        background-color: rgba(220,220,220, 0.94);
+      }
+    </style>
+
+    <script>
+      function pleaseWait(id){
+        const button = document.getElementById(id);
+
+        const oldState = button.innerHTML;
+        button.innerHTML = "Please wait...";
+
+        setTimeout((e) => button.innerHTML = oldState, 3200);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>🏙️ Address Filler</h1>
+    <button id="fillAddressButton" onclick='pleaseWait("fillAddressButton"); google.script.run.quickFill()'>Fill Addresses</button>
+    <hr style="width: 250px;">
+    <button id="resizeColumnsButton" onclick='pleaseWait("resizeColumnsButton"); google.script.run.resizeColumns()'>Auto-resize Columns</button>
+    <hr style="width: 250px;">
+    <button id="resetAllOrdersButton" onclick='pleaseWait("resetAllOrdersButton"); google.script.run.resetAllOrders()'>
+      Reset "All Orders" Sheet
+    </button>
+    <button id="resetToDo" onclick='pleaseWait("resetToDo"); google.script.run.resetToDo()'>
+      Reset "To Do List" Sheet
+    </button>
+    <button id="resetMap" onclick='pleaseWait("resetMap"); google.script.run.resetMap()'>
+      Reset "Map" Sheet
+    </button>
+    <hr style="width: 250px;">
+    <a id="helpLink" href="https://www.notion.so/Using-the-Spreadsheet-f86ef5ab719f471284f2eea3c46be77e" target="_blank"><button id="help">Help</button></a>
+  </body>
+</html>

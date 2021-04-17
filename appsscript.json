@@ -1,0 +1,36 @@
+{
+  "timeZone": "America/Los_Angeles",
+  "dependencies": {
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "sheets": {
+    "macros": [{
+      "menuName": "myFunction",
+      "functionName": "myFunction"
+    }, {
+      "menuName": "addAddress2",
+      "functionName": "addAddress2"
+    }, {
+      "menuName": "updateMap",
+      "functionName": "updateMap"
+    }, {
+      "menuName": "addAddress",
+      "functionName": "addAddress",
+      "defaultShortcut": "Ctrl+Alt+Shift+3"
+    }, {
+      "menuName": "quickFill",
+      "functionName": "quickFill"
+    }, {
+      "menuName": "resetAllOrders",
+      "functionName": "resetAllOrders"
+    }, {
+      "menuName": "sidebar",
+      "functionName": "sidebar",
+      "defaultShortcut": "Ctrl+Alt+Shift+1"
+    }, {
+      "menuName": "saveAsSpreadsheet",
+      "functionName": "saveAsSpreadsheet"
+    }]
+  }
+}
