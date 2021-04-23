@@ -1,5 +1,5 @@
 # Shopify Address Puller
-Uses Shopify's API to pull shipping info of all unfulfilled orders, using order numbers, onto a Google Sheets spreadsheet.
+Uses Shopify's REST API and Google Apps Script to pull shipping info of all unfulfilled orders, using order numbers, onto a Google Sheets spreadsheet.
 
 <img src="https://puu.sh/Hzdik/54a6dd0ebe.jpg">
 
